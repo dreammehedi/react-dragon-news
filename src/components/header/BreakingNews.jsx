@@ -3,7 +3,7 @@ import Button from "../../sharedComponents/Button";
 function BreakingNews() {
   return (
     <div className="flex justify-start gap-3 p-2 bg-dark-7 items-center">
-      <Button name="Latest" cls={"bg-[#D72050]"}></Button>
+      <Button name="Latest" cls={"bg-primary"}></Button>
       <Marquee
         className="text-dark-2 font-semibold text-base md:text-[18px] cursor-pointer"
         pauseOnHover="true"
