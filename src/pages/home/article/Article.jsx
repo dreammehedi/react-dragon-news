@@ -1,14 +1,15 @@
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaEye, FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import usePosts from "../../../posts/usePosts";
 import SkeletonLoader from "../../../sharedComponents/SkeletonLoader";
 function Article() {
-  const { fetchData, loader } = usePosts(
+  const { fetchData, loading } = usePosts(
     "https://raw.githubusercontent.com/dreammehedi/react-dragon-news/main/public/data/news.json"
   );
 
   // data not found
-  if (loader) {
+  if (loading) {
     return <SkeletonLoader></SkeletonLoader>;
   }
 
@@ -18,7 +19,7 @@ function Article() {
       {/* article posts */}
       <div className="flex flex-col space-y-8 mt-4">
         {fetchData.slice(1, 4).map((posts, ind) => {
-          const { author, title, image_url, details, rating, total_view } =
+          const { _id, author, title, image_url, details, rating, total_view } =
             posts;
           return (
             <div
@@ -56,10 +57,13 @@ function Article() {
                 <p className="text-dark-3">
                   {details.length > 200 ? details.slice(0, 200) : details}...
                 </p>
-                <button className="flex items-center text-sm font-medium text-[#FF8C47] mr-auto">
+                <Link
+                  to={`/news/${_id}`}
+                  className="flex items-center text-sm font-medium text-[#FF8C47] mr-auto"
+                >
                   Read More
                   <FaLongArrowAltRight className="ml-1"></FaLongArrowAltRight>
-                </button>
+                </Link>
                 <hr />
                 <div className="flex justify-between items-center">
                   <div className="flex">

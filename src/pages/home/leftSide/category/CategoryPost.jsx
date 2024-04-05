@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { MdOutlineDateRange } from "react-icons/md";
 import usePosts from "../../../../posts/usePosts";
-function CategoryPost() {
+function CategoryPost({ cls }) {
   // posts data get
   const { loading, fetchData } = usePosts(
     "https://raw.githubusercontent.com/dreammehedi/react-dragon-news/main/public/data/news.json"
@@ -21,7 +22,7 @@ function CategoryPost() {
   }
 
   return (
-    <div className="felx flex-col space-y-8">
+    <div className={`${cls} flex flex-col space-y-8 `}>
       {fetchData.slice(3, 6).map((singlePost, ind) => {
         const { title, image_url, author } = singlePost;
         return (
@@ -45,5 +46,7 @@ function CategoryPost() {
     </div>
   );
 }
-
+CategoryPost.propTypes = {
+  cls: PropTypes.string,
+};
 export default CategoryPost;
