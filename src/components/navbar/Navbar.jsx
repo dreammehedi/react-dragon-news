@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import userIcon from "../../assets/user.png";
 import Button from "../../sharedComponents/Button";
 import Menu from "./Menu";
@@ -15,7 +16,9 @@ function Navbar() {
           src={userIcon}
           alt="userIcon"
         />
-        <Button cls="bg-dark-2" name="Login"></Button>
+        <Link to="/login">
+          <Button cls="bg-dark-2" name="Login"></Button>
+        </Link>
       </div>
     </nav>
   );

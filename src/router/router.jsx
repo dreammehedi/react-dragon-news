@@ -5,6 +5,8 @@ import Career from "../pages/career/Career";
 import Error from "../pages/error/Error";
 import Home from "../pages/home/Home";
 import NewsDetailes from "../pages/newsDetailes/NewsDetailes";
+import Login from "../pages/sign/Login";
+import Register from "../pages/sign/Register";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "/news/:id",
         element: <NewsDetailes></NewsDetailes>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },
