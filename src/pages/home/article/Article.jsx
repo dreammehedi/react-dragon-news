@@ -13,7 +13,7 @@ function Article() {
   }
 
   return (
-    <article className="lg:col-span-2 border border-gray-50 p-4 shadow-sm rounded-sm">
+    <article className="lg:col-span-2 border border-gray-50 p-4 shadow-sm rounded-sm h-fit">
       <h2 className="text-dark-2 font-semibold text-xl"> Dragon News Home</h2>
       {/* article posts */}
       <div className="flex flex-col space-y-8 mt-4">

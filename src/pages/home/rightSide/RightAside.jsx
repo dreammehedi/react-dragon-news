@@ -14,7 +14,7 @@ import Button from "../../../sharedComponents/Button";
 
 function RightAside() {
   return (
-    <aside className="flex flex-col space-y-8 border border-gray-50 p-4 shadow-sm rounded-sm">
+    <aside className="flex flex-col space-y-8 border border-gray-50 p-4 shadow-sm rounded-sm h-fit">
       {/* login */}
       <div>
         <h2 className="text-dark-2 font-semibold text-xl">Login With</h2>
