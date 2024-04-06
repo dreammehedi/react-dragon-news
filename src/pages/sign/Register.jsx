@@ -1,10 +1,14 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
+import AuthContext from "../../context/AuthContext";
 import Button from "../../sharedComponents/Button";
 
 function Register() {
   const { pathname } = useLocation();
+
+  const { name } = useContext(AuthContext);
+  console.log(name);
 
   useEffect(() => {
     const changeBgLogin = () => {

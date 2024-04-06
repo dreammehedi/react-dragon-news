@@ -67,7 +67,7 @@ function Login() {
             <Button cls={"bg-dark-2"} type={"submit"} name="Login"></Button>
           </form>
           <p className="text-center text-sm font-semibold mt-3">
-            Dont’t Have An Account ?{" "}
+            {" Dont’t Have An Account ?"}{" "}
             <Link to="/register" className="text-primary">
               Register
             </Link>
